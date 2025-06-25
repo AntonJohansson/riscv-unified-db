@@ -41,7 +41,7 @@ access:
   vs: always
   vu: always
 operation(): |
-  XReg width = width_minus1 + 1;
+  XReg width = width_minus1 `+ 1;
   if (width + shamt > 32) {
     XReg shifted_one = 32'b1 << (width + shamt - 32);
     XReg mask = (shifted_one - 1);
